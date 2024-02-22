@@ -1,52 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; //using usestate
 import Images from './ImageComponent';
 import "../index.css"
 import Toggle from './Toggle';
 import questions from '../questions';
 import { BrowserRouter,Route,Routes, useNavigate } from 'react-router-dom';
 import Result from './Result';
-export const ToggleTheme = React.createContext();
+export const ToggleTheme = React.createContext(); //creating context
 
 export default function QuestionBox() {
-  const [state, setState] = useState(true);
-  const [count, setCount] = useState(0);
+  const [state, setState] = useState(true);//initial value 0
+  const [count, setCount] = useState(0);//initial value 0
   const [highlighted, setHighlighted] = useState(false); 
-  const [ans,Setans]=useState(0);
-  const nav=useNavigate()
+  const [ans,Setans]=useState(0);//initial value 0
+  const nav=useNavigate() //using navigate to navigate other pages.
   function Next(option) {
     if(count>=4){
     setCount(count+1);
-     nav(`result/${ans}`)
+    nav(`/result/${option.isCorrect ? ans+1 :ans}`)//Manipluating answer ifanswer is right +1 or writing previse answer 
     }
     else{
-      setCount((val) => val + 1);
+      setCount((val) => val + 1); //count increase question 
     }
     if (option.isCorrect===true){
-      Setans((val)=>val+1);
+      Setans((val)=>val+1);//if solution correct increase solution
     }}
    console.log(ans)
   const handleToggle = () => {
-    setState(state => !state);
+    setState(state => !state);//if state false
   }
 
   const handleHighlight = () => {
-    setHighlighted(true);
+    setHighlighted(true);//if state true
   };
 
   const handleRemoveHighlight = () => {
-    setHighlighted(false);
+    setHighlighted(false); 
   };
 
 
   return (
-    <div className='Container'>
+    <div className='Container'> 
       <div className='top'>
         <img className="logo" src={Images.Iq} alt="Iq image" />
         <div className='mode'>
           <h3>Mode:</h3>
           <ToggleTheme.Provider value={state}>
             <button className='toggle' onClick={handleToggle}>
-              {state ? 'Light' : 'Dark'}
+              {state ? 'Light' : 'Dark'} {/* ternary operator */}
             </button>
             <Toggle />
           </ToggleTheme.Provider>

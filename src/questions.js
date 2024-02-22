@@ -12,10 +12,10 @@ const questions = [
   {
     text: "React.js is written in which of the following language?",
     options: [
-      { id: 0, text: "JavaScript", isCorrect: false },
+      { id: 0, text: "JavaScript", isCorrect: true },
       { id: 1, text: "Java", isCorrect: false },
       { id: 2, text: "C", isCorrect: false },
-      { id: 3, text: "C++", isCorrect: true },
+      { id: 3, text: "C++", isCorrect: false },
     ],
   },
   {
@@ -31,19 +31,19 @@ const questions = [
   {
     text: "What is the return value of the useState hook?",
     options: [
-      { id: 0, text: " Pair of current state and function updating it", isCorrect: false },
+      { id: 0, text: " Pair of current state and function updating it", isCorrect: true },
       { id: 1, text: "Current State", isCorrect: false },
-      { id: 2, text: "Function updating the current state", isCorrect: true },
+      { id: 2, text: "Function updating the current state", isCorrect: false },
       { id: 3, text: "UseState returns nothing", isCorrect: false },
     ],
   },
   {
     text: "How many elements can a valid react component return?",
     options: [
-      { id: 0, text: "1", isCorrect: false },
+      { id: 0, text: "1", isCorrect: true },
       { id: 1, text: "2", isCorrect: false },
       { id: 2, text: "3", isCorrect: false },
-      { id: 3, text: "4", isCorrect: true },
+      { id: 3, text: "4", isCorrect: false },
     ],
   },
 ];

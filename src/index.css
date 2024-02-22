@@ -19,6 +19,14 @@ code {
 .logo {
   width: 8%;
 }
+.resultBtn{
+  display: flex;
+  justify-content: space-between;
+  width: 9%;
+  position: absolute;
+  top:20px;
+  right:5%;
+}
 
 .mode {
   display: flex;
@@ -106,9 +114,13 @@ code {
   width: 100%;
   height: 62px;
   border-radius: 20px;
-  white-space: nowrap; /* Prevent the text from wrapping */
-  overflow: hidden; /* Hide content that overflows */
-  text-overflow: ellipsis; /* Show ... if the text overflows */
+  
+  /* white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis;  */
+}
+.text:hover{
+  color: #1030af;
 }
 
 .list {
@@ -129,7 +141,19 @@ code {
   font-weight: bold;
   height: 60px;
 }
-
+.grids:hover{
+  background-color: rgb(255, 254, 167);
+  color: black;
+  box-shadow: 10px 10px;
+}
+.buttons>:nth-child(1):hover{
+  background-color: #ed6a4d;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.buttons>:nth-child(2):hover{
+  background-color: rgb(52, 211, 52);
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .optiondiv {
   width: 100%;
   position: absolute;
@@ -152,7 +176,6 @@ code {
 .resultCon{
   width:40% ;
   margin-left: 30%;
-  margin-top: 10%;
   height: 400px;
   background-color: #e1f9b0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -170,4 +193,150 @@ code {
   color: #c112dd;
   font-weight: bolder;
   font-size: 18px;
+}
+.logos{
+  width: 8%;
+}
+/*Responsive design*/
+@media(max-width: 600px) and (min-width: 320px){
+  .logo {
+    width: 22%;
+}
+.mode {
+    width: 42%;   
+}
+.resultBtn{
+  width: 45%;
+}
+.Bg {
+    width: 100%;
+    margin-left: 0px;
+    height: 450px;
+    margin-top: 10%;
+}
+.list {
+    grid-template-columns: 1fr;
+    right: -110px;
+    /* border: 1px solid; */
+    width: 120%;
+    font-size: 10px;
+    position: absolute;
+    bottom: -270px;
+}
+.grids {
+    height: 55px;
+    width: 100%;
+}
+.flexs {
+    font-size: small;
+    width: 65%;
+    /* border: 1px solid; */
+    position: absolute;
+    left: 0px;
+}
+.head2 {
+    font-size: 16px;
+}
+.text {
+    height: 120px;
+    border-radius: 8px;
+    width: 100%;
+    position: absolute;
+    right: 70%;
+    border: 3px solid rgb(0, 255, 153);
+    top:79px;
+}
+.question {
+    /* border: 1px solid; */
+    position: absolute;
+    top: 30%;
+}
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid ; */
+  position: absolute;
+  left: 0px;
+  bottom:10% ;
+}
+.buttons>:nth-child(1){
+  width: 40%;
+}
+.buttons>:nth-child(2){
+  width: 40%;
+}
+.resultCon{
+  width: 80%;
+  position: absolute;
+  left: -60px;
+  top:90px;
+}
+.btn{
+  width: 40%;
+}
+.contentR{
+  margin-top: 60px;
+}
+}
+/*Tab responsive*/
+@media(max-width: 769px) and (min-width: 768px){
+  .logo{
+    width: 18%;
+  }
+  .logos{
+    width: 15%;
+  }
+  .mode{
+    width: 20%;
+  }
+  .Bg{
+    width: 85%;
+    left: -50px;
+    position: absolute;
+  }
+  .grids{
+    width:110% ;
+    height: 85px;
+  }
+  .list{
+    width: 130%;
+    display: grid;
+    gap: 40px;
+    position: absolute;
+    top: 50px;
+  }
+  .text{
+    position: absolute;
+    left: -10px;
+    top: -50px;
+    height: 100px;
+  }
+  .buttons{
+    width: 50%;
+    position: absolute;
+    left: 24%;
+  }
+  .buttons>:nth-child(1){
+    width: 40%;
+  }
+  .buttons>:nth-child(2){
+    width: 40%;
+  }
+  .flexs{
+    width:49%;
+   position: absolute;
+   left: 50px;
+  }
+  .resultCon{
+    width: 80%;
+    position: absolute;
+    left: -150px;
+    top: 180px;
+  }
+  .resultBtn{
+    width: 20%;
+    position: absolute;
+    right: 10%;
+  }
 }
